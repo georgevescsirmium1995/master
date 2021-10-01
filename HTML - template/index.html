@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="sr">
+    <head>
+        <title>
+        GermanPro Dog Washer - Machine Stats
+        </title>
+        <link rel="stylesheet" href="css/dogwasher.css">
+        <link rel="stylesheet" href="css/jquery-ui.css"/>
+        <script src="js/jquery-3.6.0.min.js"></script>
+        <script src="js/jquery-ui.js"></script>
+        <script src="js/index.js" ></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            </head>
+    <body>
+        <div class="main-data">
+                <div class="menu">
+                    <div class="full-menu">
+                        <!-- HTML kod za full menu -->
+                    <div class="language-highlight-main">
+                        <div class="highlight-left">
+                            Current date : 02.07.2021.				</div>
+                        <div class="highlight-right">
+                            <div class="language-container-main">
+                                <div class="language-instance-main" id="select-eng-button">
+                                    <form id="select-eng" name="select-eng"  method="POST">
+                                        <img src="images/languages/english_flag.gif" alt="British flag"> &nbsp;English
+                                        <input name="selected-language" type="hidden" value="eng" />
+                                    </form>
+                                </div>
+                                <div class="language-instance-main" id="select-srb-button">
+                                    <form id="select-srb" name="select-srb"  method="POST">
+                                        <img src="images/languages/serbian_flag.gif" alt="Serbian flag"> &nbsp;Srpski
+                                        <input name="selected-language" type="hidden" value="srb" />
+                                    </form>
+                                </div>
+                                <div class="language-instance-main" id="select-ger-button">
+                                    <form id="select-ger" name="select-ger"  method="POST">
+                                        <img src="images/languages/german_flag.gif" alt="German flag"> &nbsp;Deutsche
+                                        <input name="selected-language" type="hidden" value="ger" />
+                                    </form>
+                                </div>
+                                <div class="user-panel">
+                                    User :                             <label id="user-panel-label" class="link-effect" >sch4zr</label>
+                                    <a href="logout.php">Logout</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h1 class="highlight">
+                GermanPro Dog Washer - Machine Usage  from 01.06.2021. to 02.07.2021.            </h1>
+            <form name="single_date_form"  method="POST" >
+                <table class="table-search">
+                    <tr>
+                        <td class="table-column">
+                            Show machine usage for date :                         <input name="single_date" id="single_date" type="text" autocomplete="off" placeholder="yyyy-mm-dd" style="width:90px" readonly> 
+                        <input name="forward" id ="forward" type="checkbox"> until today.                        </td>
+                        <td>
+                        <input class="button-foundation button-front" type="submit" value="Show">
+                        </td>    
+                    </tr>
+                </table>
+            </form>
+            <form name="range_date_form" method="POST" >
+                <table class="table-search">
+                    <tr>
+                        <td class="table-column">
+                            Show machine usage from                         <input name="date_from" id="date_from" type="text" autocomplete="off" placeholder="yyyy-mm-dd" style="width:90px" readonly>
+                             to                         <input name="date_to" id="date_to" type="text" autocomplete="off" placeholder="yyyy-mm-dd" style="width:90px" readonly>
+                        </td>
+                        <td>
+                        <input class="button-foundation button-front" type="submit" value="Show">
+                       </td>
+                    </tr>
+                </table>
+            </form>
+            <br/>
+            <table class="data-table-general-usage">
+                <thead>
+                    <tr>
+                        <th>
+                            Real working hours                        </th>
+                        <th>
+                            Paid working hours                        </th>
+                        <th>
+                            Machine time spent in pause                        </th>
+                        <th>Coins</th>
+                                 <th>Cash</th>                        <th>
+                            Earnings (Dinars)                        </th>
+                    </tr>
+                </thead>
+                <tr>
+                    <td>
+                        0 day(s), 0 hour(s), 21 minute(s)                    </td>
+                    <td>
+                        0 day(s), 0 hour(s), 9 minute(s)                    </td>
+                    <td>
+                        0 day(s), 0 hour(s), 12 minute(s)                    </td>
+                    <td>300</td><td>150</td>                    <td>
+                        450                    </td>
+                </tr>
+            </table>
+            <br/>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th class="large_column">
+                            Machine started                        </th>
+                        <th class="large_column">
+                            Machine ended                        </th>
+                        <th class="large_column">
+                            Actual operation (Minutes)                        </th>
+                        <th class="large_column">
+                            Paid (Dinaras)                        </th>
+                        <th class="large_column">
+                            Paid (Minutes)                        </th>
+                        <th class="small_column">
+                            Edit                        </th>
+                        <th class="small_column">
+                            Delete                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                                        <tr id="record_1">
+                        <td class="large_column">
+                            <label id="label_record_1_washing_started">
+                                08.06.2021 17:00:01                            </label>
+                        </td>
+                        <td class="large_column">
+                            <label id="label_record_1_washing_ended">
+                                08.06.2021 17:07:00                            </label>
+                        </td>
+                        <td class="large_column">
+                            <label id="label_record_1_running_time">
+                                7 
+                            </label>
+                        </td>
+                        <td class="large_column">
+                            <label id="label_record_1_payed_money">
+                                150 
+                            </label>
+                        </td>
+                        <td class="large_column">
+                            <label id="label_record_1_payed_minutes">
+                                3 
+                            </label>
+                        </td>
+                        <td class="small_column">
+                            <div class="edit-button" onclick="edit_record('1')" ></div>
+                        </td>
+                        <td class="small_column">
+                            <div class="delete-button" onclick="delete_record('1')"></div>
+                        </td>
+                    </tr>
+                                        <tr id="record_2">
+                        <td class="large_column">
+                            <label id="label_record_2_washing_started">
+                                10.06.2021 17:00:02                            </label>
+                        </td>
+                        <td class="large_column">
+                            <label id="label_record_2_washing_ended">
+                                10.06.2021 17:07:01                            </label>
+                        </td>
+                        <td class="large_column">
+                            <label id="label_record_2_running_time">
+                                7 
+                            </label>
+                        </td>
+                        <td class="large_column">
+                            <label id="label_record_2_payed_money">
+                                150 
+                            </label>
+                        </td>
+                        <td class="large_column">
+                            <label id="label_record_2_payed_minutes">
+                                3 
+                            </label>
+                        </td>
+                        <td class="small_column">
+                            <div class="edit-button" onclick="edit_record('2')" ></div>
+                        </td>
+                        <td class="small_column">
+                            <div class="delete-button" onclick="delete_record('2')"></div>
+                        </td>
+                    </tr>
+                                        <tr id="record_3">
+                        <td class="large_column">
+                            <label id="label_record_3_washing_started">
+                                17.06.2021 17:00:00                            </label>
+                        </td>
+                        <td class="large_column">
+                            <label id="label_record_3_washing_ended">
+                                17.06.2021 17:07:00                            </label>
+                        </td>
+                        <td class="large_column">
+                            <label id="label_record_3_running_time">
+                                7 
+                            </label>
+                        </td>
+                        <td class="large_column">
+                            <label id="label_record_3_payed_money">
+                                150 
+                            </label>
+                        </td>
+                        <td class="large_column">
+                            <label id="label_record_3_payed_minutes">
+                                3 
+                            </label>
+                        </td>
+                        <td class="small_column">
+                            <div class="edit-button" onclick="edit_record('3')" ></div>
+                        </td>
+                        <td class="small_column">
+                            <div class="delete-button" onclick="delete_record('3')"></div>
+                        </td>
+                    </tr>
+                                    </tbody>
+            </table>
+            <div class="footer">
+                <a href="http://www.germanpro.net" target="_blank"> www.germanpro.net </a><br/>
+                <a href="mailto:order@germanpro.net"> order@germanpro.net </a><br/>
+                tel: 060/60-70-100 Viber / WhatsApp
+            </div>
+
+            <div id="edit-record-modal" class="modal">
+                <form class="modal-content animate" id="edit-record-form" name="edit-record-form">
+                    <div class="container">
+                        <div class="highlight">
+                            Edit record                        </div>
+                        <input type="hidden" name="edit-entry-id" id="edit-entry-id" >
+                        <label for="edit-work-started"><b>Machine starded</b></label>
+                        <input type="text" placeholder="Enter time machine started" name="edit-work-started" id="edit-work-started" required>
+
+                        <label for="edit-work-ended"><b>Machine ended</b></label>
+                        <input type="text" placeholder="Enter time machine ended" name="edit-work-ended" id="edit-work-ended" required>
+
+                        <label for="edit-real-work"><b>Actual operation (Minutes)</b></label>
+                        <input type="text" placeholder="Enter actual operation (Minutes)" name="edit-real-work" id="edit-real-work" required>
+
+                        <label for="edit-coins"><b>Paid (Coins)</b></label>
+                        <input type="text" placeholder="Enter paid amount in coins" name="edit-coins" id="edit-coins" required>
+
+                        <label for="edit-cash"><b>Paid (Cash)</b></label>
+                        <input type="text" placeholder="Enter paid amount in cash" name="edit-cash" id="edit-cash" required>
+
+                        <label for="edit-payed-total"><b>Paid (Coins + Cash)</b></label>
+                        <input type="text" placeholder="Enter total paid amount" name="edit-payed-total" id="edit-payed-total" required>
+
+                        <label for="edit-payed-minutes"><b>Paid (Minutes)</b></label>
+                        <input type="text" placeholder="Enter paid machine time in minutes" name="edit-payed-minutes" id="edit-payed-minutes" required>
+
+                        <div class="edit-record-modal-buttons">
+                            <button id="edit-btn-confirm" name="edit-btn-confirm" class="button-foundation button-front" type="button">Confirm</button>
+                            <button id="edit-btn-cancel" name="edit-btn-cancel" class="button-foundation button-front" type="button">Cancel</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div>
+                <input type="hidden" id="delete_record_dialog_title" name="delete_record_dialog_title" value="Confirm deleting the record" />
+                <input type="hidden" id="delete_record_dialog_message" name="delete_record_dialog_nessage" value="Do you want to delete the record?" />
+                <input type="hidden" id="delete_record_dialog_confirm" name="delete_record_dialog_confirm" value="Yes" />
+                <input type="hidden" id="delete_record_dialog_cancel" name="delete_record_dialog_cancel" value="No" />
+
+                <input type="hidden" id="edit_record_dialog_title" name="edit_record_dialog_title" value="Not all fields are filled" />
+                <input type="hidden" id="edit_record_dialog_message" name="edit_record_dialog_message" value="Please fill in all fields!" />
+                <input type="hidden" id="edit_record_dialog_confirm" name="edit_record_dialog_confirm" value="OK" />
+            
+                <input type="hidden" id="edit-work-started-error" name="edit-work-started-error" value="Date and time of Machine started are not in proper format." />
+                <input type="hidden" id="edit-work-ended-error" name="edit-work-ended-error" value="Date and time of Machine ended are not in proper format." />
+                <input type="hidden" id="edit-real-work-error" name="edit-real-work-error" value="Value of field Actual operation (Minutes) must be a whole number." />
+                <input type="hidden" id="edit-coins-error" name="edit-coins-error" value="Value of field Paid (Coins) must be a whole number." />
+                <input type="hidden" id="edit-cash-error" name="edit-cash-error" value="Value of field Paid (Cash) must be a whole number." />
+                <input type="hidden" id="edit-payed-total-error" name="edit-payed-total-error" value="Value of field Paid (Coins + Cash) must be a whole number." />
+                <input type="hidden" id="edit-payed-minutes-error" name="edit-payed-minutes-error" value="Value of field Paid (Minutes) must be a whole number." />
+
+                <input type="hidden" id="edit-error-info-title" name="edit-error-info-title" value="Information " />
+                <input type="hidden" id="edit-error-info-message-part-one" name="edit-error-info-message-part-one" value="The values of the following fields do not have adequate values. " />
+                <input type="hidden" id="edit-error-info-message-part-two" name="edit-error-info-message-part-two" value="Please correct the values of the fields listed. " />
+                <input type="hidden" id="edit-error-info-confirm" name="edit-error-info-confirm" value="OK" />
+            
+                <input type="hidden" id="user-current-password-error" name="user-current-password-error" value="The current password is incorrect." />
+                <input type="hidden" id="user-password-missmatch-error" name="user-password-missmatch-error" value="New and confirmed passwords do not match." />
+            
+                <input type="hidden" id="user-password-changed" name="user-password-changed" value="Password changed." />    
+            </div>
+
+            <div id="edit-user-password-modal" class="modal">
+                <form class="modal-content animate" id="edit-user-password-form" name="edit-user-password-form">
+                    <div class="container">
+                        <div class="highlight">
+                            Edit password                        </div>
+                        <input type="hidden" name="edit-user-password-username" id="edit-user-password-username" value="sch4zr" >
+                        <label for="edit-user-current-password"><b>Current password</b></label>
+                        <input type="password" placeholder="Enter your current password" name="edit-user-current-password" id="edit-user-current-password" required>
+
+                        <label for="edit-user-password-new"><b>New password</b></label>
+                        <input type="password" placeholder="Enter your new password" name="edit-user-password-new" id="edit-user-password-new" required>
+
+                        <label for="edit-user-password-repeat"><b>Verify password</b></label>
+                        <input type="password" placeholder="Verify your new password" name="edit-user-password-repeat" id="edit-user-password-repeat" required>
+
+                        <div class="edit-record-modal-buttons">
+                            <button id="user-btn-confirm" name="user-btn-confirm" class="button-foundation button-front" type="button">Confirm</button>
+                            <button id="user-btn-cancel" name="user-btn-cancel" class="button-foundation button-front" type="button">Cancel</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+    </body>
+</html>

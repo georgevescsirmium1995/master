@@ -1,0 +1,505 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+}
+
+html 
+{ 
+    background: url('../images/background.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin: 0;
+    min-height:100%;
+    position:relative;
+}
+
+body
+{
+    height: 100%;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    overflow: hidden;
+}
+
+.main-data {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    background: #ffffff;
+    border-left: #000000 2px solid;
+    border-right: #000000 2px solid;
+    min-height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+}
+
+.section{ 
+    width: 800px;
+    height: 600px;
+    margin-top: 50px;
+    margin-left: 250px;
+    border: solid black 1px;
+    background: #e6e3dc;
+}
+
+/* Defititions for Data Table */
+
+.data-table {
+    table-layout: fixed;
+    border-collapse: collapse;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.data-table tbody {
+    display: block;
+    width: 100%;
+    overflow: auto;
+    height: 400px;
+}
+  
+.data-table thead tr {
+    background-color: #2a7bcf;
+    color: #ffffff;
+    text-align: center;
+    display: block;
+    width: 100%;
+}
+
+.data-table th, .data-table td {
+    padding: 12px 15px;
+    text-align: center;
+}
+
+.edit-button
+{
+    width: 32px;
+    height: 32px;
+    background: url("../images/edit_normal.png") no-repeat;
+    display: inline-block;
+}
+
+.edit-button:hover{
+    background: url("../images/edit_hover.png") no-repeat;
+}
+
+.delete-button
+{
+    width: 32px;
+    height: 32px;
+    background: url("../images/delete_normal.png") no-repeat;
+    display: inline-block;
+}
+
+.delete-button:hover{
+    width: 32px;
+    height: 32px;
+    background: url("../images/delete_hover.png") no-repeat;
+}
+
+.small_column
+{
+    width: 80px;
+}
+
+.large_column
+{
+    width: 150px;
+}
+
+.data-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.data-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.data-table tbody tr:last-of-type {
+    border-bottom: 2px solid #2a7bcf;
+}
+
+.data-table tbody tr.active-row {
+    font-weight: bold;
+    color: #2a7bcf;
+}
+
+/* Defititions for General Usage Table */
+
+.data-table-general-usage {
+    border-collapse: collapse;
+    margin: 0 auto;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.data-table-general-usage thead tr {
+    background-color: #2a7bcf;
+    color: #ffffff;
+    text-align: center;
+}
+
+.data-table-general-usage th, .data-table-general-usage td {
+    padding: 12px 15px;
+    text-align: center;
+}
+
+.data-table-general-usage tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.data-table-general-usage tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.data-table-general-usage tbody tr:last-of-type {
+    border-bottom: 2px solid #2a7bcf;
+}
+
+.data-table-general-usage tbody tr.active-row {
+    font-weight: bold;
+    color: #2a7bcf;
+}
+
+.highlight {
+    background-color: #2a7bcf;
+    color: #ffffff;
+    text-align: center;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border-bottom: #000000 5px solid;
+}
+
+.highlight-left
+{
+    width: 50%;
+    float: left;
+    text-align: left;
+}
+
+.highlight-right
+{
+    text-align: right;
+}
+
+.button-foundation {
+    background-color: #2a7bcf; 
+    border: none;
+    color: white;
+    padding: 4px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 20px;
+}
+  
+.button-front {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #2a7bcf;
+}
+  
+.button-front:hover {
+    background-color: #2a7bcf;
+    color: white;
+}
+
+.footer {
+    position:absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: white;
+    text-align: center;
+    margin-bottom: 10px;
+    background-color: #2a7bcf;
+    text-align: center;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    margin-top: 10px;
+    border-bottom: #000000 5px solid;
+}
+
+a, a:link, a:visited {
+    color:#ffffff;
+}
+
+.table-search {
+    width: 550px;
+}
+
+.table-search td {
+    text-align: left;
+    vertical-align: middle;
+}
+
+.table-search .table-column {
+    width: 450px;
+}
+
+
+/* login page*/
+
+
+.container input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+  
+  /* Set a style for all buttons */
+.login-button {
+    padding: 14px 20px;
+    margin: 8px 0;
+    cursor: pointer;
+    width: 100%;
+    background-color: #2a7bcf;
+    color: white;
+}
+
+.login-button:hover
+{
+    opacity: 0.8;
+}
+   
+.imgcontainer {
+    text-align: center;
+    margin: 10px 0 0 0;
+    position: relative;
+}
+  
+.container {
+    padding: 16px;
+    text-align: left;
+}
+  
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+    padding-top: 60px;
+}
+  
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; 
+    border: 1px solid #888;
+    width: 30%; 
+}
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+  
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+.edit-record-modal-buttons
+{
+    text-align: center;
+}
+
+.language-highlight
+{
+    background-color: #2a7bcf;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 15px;
+    border-bottom: #000000 5px solid;
+}
+
+.language-highlight-main
+{
+    background-color: #2a7bcf;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 15px;
+    border-bottom: #000000 5px solid;
+    height: 25px;
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.language-container
+{
+    padding-top: 5px;
+    text-align: center;
+    width: 50%;
+    height: 25px;
+}
+
+.language-container-main
+{
+    float: right;
+}
+
+.language-instance
+{
+    text-align: center;
+    width: 33%;
+    float:left;
+}
+
+.language-instance:hover
+{
+    cursor: pointer;
+}
+
+.language-instance-main
+{
+    text-align: center;
+    margin-left: 5px;
+    margin-right: 5px;
+    float:left;
+}
+
+.language-instance-main:hover
+{
+    cursor: pointer;
+}
+
+.user-panel
+{
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    float:left;
+}
+
+.error-message
+{
+    border-radius: 10px;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #ff0000;
+    color: #ffffff;
+}
+
+.error-message-edit
+{
+    margin-left: 50px;
+}
+
+.link-effect
+{
+    cursor: pointer;
+}
+
+.logo-image
+{
+    width: 80%;
+}
+
+.language-text
+{
+    float: left;
+    text-align: center;
+    width: 80%;
+}
+
+.language-image
+{
+    float: left;
+    padding-top: 4px;
+
+}
+
+
+/* media query */
+
+/* small screen size (small) --smal */
+
+@media screen and (min-width: 640px) {
+
+    .language-image
+    {
+        padding-left: 30%;
+    }
+
+    .language-text
+    {
+        display: none;
+    }
+}
+
+/* medium screen size (medium) --medium */
+
+@media screen and (min-width: 1280px) {
+
+    .language-image
+    {
+        padding-left: 0;
+    }
+
+    .language-container
+    {
+        width: 80%;
+    }
+
+    .language-text
+    {
+        display: block;
+    }
+}
+
+/* medium screen size (large) --large */
+
+@media screen and (min-width: 1920px) {
+
+    .language-image
+    {
+        padding-left: 0;
+    }
+
+    .language-text
+    {
+        display: block;
+    }
+
+    .language-container
+    {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 795px) {
+    .Navbar__Items,
+    .Navbar {
+      flex-direction: column;
+    }
+    .Navbar__Items {
+        display:none;
+      }
+    .Navbar__Items--right {
+      margin-left: 0;
+    }
+  }
+
+
