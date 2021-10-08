@@ -13,12 +13,13 @@
             </head>
     <body>
         <div class="main-data">
-                <div class="menu">
-                    <div class="full-menu">
-                        <!-- HTML kod za full menu -->
+            <div class="menu">
+                <div class="full-menu">
+                    <!-- HTML kod za full menu -->
                     <div class="language-highlight-main">
                         <div class="highlight-left">
-                            Current date : 02.07.2021.				</div>
+                            Current date : 02.07.2021.
+                        </div>
                         <div class="highlight-right">
                             <div class="language-container-main">
                                 <div class="language-instance-main" id="select-eng-button">
@@ -40,7 +41,8 @@
                                     </form>
                                 </div>
                                 <div class="user-panel">
-                                    User :                             <label id="user-panel-label" class="link-effect" >sch4zr</label>
+                                    User :
+                                    <label id="user-panel-label" class="link-effect" >sch4zr</label>
                                     <a href="logout.php">Logout</a>
                                 </div>
                             </div>
@@ -49,15 +51,18 @@
                 </div>
             </div>
             <h1 class="highlight">
-                GermanPro Dog Washer - Machine Usage  from 01.06.2021. to 02.07.2021.            </h1>
+                GermanPro Dog Washer - Machine Usage  from 01.06.2021. to 02.07.2021.
+            </h1>
             <form name="single_date_form"  method="POST" >
                 <table class="table-search">
                     <tr>
                         <td class="table-column">
-                            Show machine usage for date :                         <input name="single_date" id="single_date" type="text" autocomplete="off" placeholder="yyyy-mm-dd" style="width:90px" readonly> 
-                        <input name="forward" id ="forward" type="checkbox"> until today.                        </td>
+                            Show machine usage for date :
+                            <input name="single_date" id="single_date" type="text" autocomplete="off" placeholder="yyyy-mm-dd" style="width:90px" readonly> 
+                            <input name="forward" id ="forward" type="checkbox"> until today.
+                        </td>
                         <td>
-                        <input class="button-foundation button-front" type="submit" value="Show">
+                            <input class="button-foundation button-front" type="submit" value="Show">
                         </td>    
                     </tr>
                 </table>
@@ -70,7 +75,7 @@
                              to                         <input name="date_to" id="date_to" type="text" autocomplete="off" placeholder="yyyy-mm-dd" style="width:90px" readonly>
                         </td>
                         <td>
-                        <input class="button-foundation button-front" type="submit" value="Show">
+                            <input class="button-foundation button-front" type="submit" value="Show">
                        </td>
                     </tr>
                 </table>
@@ -79,57 +84,47 @@
             <table class="data-table-general-usage">
                 <thead>
                     <tr>
-                        <th>
-                            Real working hours                        </th>
-                        <th>
-                            Paid working hours                        </th>
-                        <th>
-                            Machine time spent in pause                        </th>
+                        <th>Real working hours</th>
+                        <th>Paid working hours</th>
+                        <th>Machine time spent in pause</th>
                         <th>Coins</th>
-                                 <th>Cash</th>                        <th>
-                            Earnings (Dinars)                        </th>
+                        <th>Cash</th>
+                        <th>Earnings (Dinars)</th>
                     </tr>
                 </thead>
                 <tr>
-                    <td>
-                        0 day(s), 0 hour(s), 21 minute(s)                    </td>
-                    <td>
-                        0 day(s), 0 hour(s), 9 minute(s)                    </td>
-                    <td>
-                        0 day(s), 0 hour(s), 12 minute(s)                    </td>
-                    <td>300</td><td>150</td>                    <td>
-                        450                    </td>
+                    <td>0 day(s), 0 hour(s), 21 minute(s)</td>
+                    <td>0 day(s), 0 hour(s), 9 minute(s)</td>
+                    <td>0 day(s), 0 hour(s), 12 minute(s)</td>
+                    <td>300</td>
+                    <td>150</td>
+                    <td>450</td>
                 </tr>
             </table>
             <br/>
             <table class="data-table">
                 <thead>
                     <tr>
-                        <th class="large_column">
-                            Machine started                        </th>
-                        <th class="large_column">
-                            Machine ended                        </th>
-                        <th class="large_column">
-                            Actual operation (Minutes)                        </th>
-                        <th class="large_column">
-                            Paid (Dinaras)                        </th>
-                        <th class="large_column">
-                            Paid (Minutes)                        </th>
-                        <th class="small_column">
-                            Edit                        </th>
-                        <th class="small_column">
-                            Delete                        </th>
+                        <th class="large_column">Machine started</th>
+                        <th class="large_column">Machine ended</th>
+                        <th class="large_column">Actual operation (Minutes)</th>
+                        <th class="large_column">Paid (Dinaras)</th>
+                        <th class="large_column">Paid (Minutes)</th>
+                        <th class="small_column">Edit</th>
+                        <th class="small_column">Delete</th>
                     </tr>
                 </thead>
                 <tbody>
-                                        <tr id="record_1">
+                    <tr id="record_1">
                         <td class="large_column">
                             <label id="label_record_1_washing_started">
-                                08.06.2021 17:00:01                            </label>
+                                08.06.2021 17:00:01
+                            </label>
                         </td>
                         <td class="large_column">
                             <label id="label_record_1_washing_ended">
-                                08.06.2021 17:07:00                            </label>
+                                08.06.2021 17:07:00
+                            </label>
                         </td>
                         <td class="large_column">
                             <label id="label_record_1_running_time">
@@ -153,14 +148,16 @@
                             <div class="delete-button" onclick="delete_record('1')"></div>
                         </td>
                     </tr>
-                                        <tr id="record_2">
+                        <tr id="record_2">
                         <td class="large_column">
                             <label id="label_record_2_washing_started">
-                                10.06.2021 17:00:02                            </label>
+                                10.06.2021 17:00:02
+                            </label>
                         </td>
                         <td class="large_column">
                             <label id="label_record_2_washing_ended">
-                                10.06.2021 17:07:01                            </label>
+                                10.06.2021 17:07:01
+                            </label>
                         </td>
                         <td class="large_column">
                             <label id="label_record_2_running_time">
@@ -184,14 +181,16 @@
                             <div class="delete-button" onclick="delete_record('2')"></div>
                         </td>
                     </tr>
-                                        <tr id="record_3">
+                        <tr id="record_3">
                         <td class="large_column">
                             <label id="label_record_3_washing_started">
-                                17.06.2021 17:00:00                            </label>
+                                17.06.2021 17:00:00
+                            </label>
                         </td>
                         <td class="large_column">
                             <label id="label_record_3_washing_ended">
-                                17.06.2021 17:07:00                            </label>
+                                17.06.2021 17:07:00
+                            </label>
                         </td>
                         <td class="large_column">
                             <label id="label_record_3_running_time">
@@ -215,7 +214,7 @@
                             <div class="delete-button" onclick="delete_record('3')"></div>
                         </td>
                     </tr>
-                                    </tbody>
+                </tbody>
             </table>
             <div class="footer">
                 <a href="http://www.germanpro.net" target="_blank"> www.germanpro.net </a><br/>
@@ -227,7 +226,8 @@
                 <form class="modal-content animate" id="edit-record-form" name="edit-record-form">
                     <div class="container">
                         <div class="highlight">
-                            Edit record                        </div>
+                            Edit record
+                        </div>
                         <input type="hidden" name="edit-entry-id" id="edit-entry-id" >
                         <label for="edit-work-started"><b>Machine starded</b></label>
                         <input type="text" placeholder="Enter time machine started" name="edit-work-started" id="edit-work-started" required>
@@ -290,7 +290,8 @@
                 <form class="modal-content animate" id="edit-user-password-form" name="edit-user-password-form">
                     <div class="container">
                         <div class="highlight">
-                            Edit password                        </div>
+                            Edit password
+                        </div>
                         <input type="hidden" name="edit-user-password-username" id="edit-user-password-username" value="sch4zr" >
                         <label for="edit-user-current-password"><b>Current password</b></label>
                         <input type="password" placeholder="Enter your current password" name="edit-user-current-password" id="edit-user-current-password" required>
