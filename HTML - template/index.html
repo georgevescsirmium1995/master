@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html lang="sr">
     <head>
-        <title>
-        GermanPro Dog Washer - Machine Stats
-        </title>
+        <title>GermanPro Dog Washer - Machine Stats</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/dogwasher.css">
         <link rel="stylesheet" href="css/jquery-ui.css"/>
         <script src="js/jquery-3.6.0.min.js"></script>
         <script src="js/jquery-ui.js"></script>
-        <script src="js/index.js" ></script>
+        <script src="js/modal.js" ></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
             </head>
     <body>
-        <div class="main-data">
-            <div class="menu">
+        <main class="main-data">
+            <header class="menu desktop">
                 <div class="highlight-left">
-                    Current date : 02.07.2021.
+                    Current date : <time>02.07.2021.</time>
                 </div>
                 <div class="highlight-right">
                     <div class="language-container">
@@ -38,11 +39,14 @@
                         <a href="logout.php">Logout</a>
                     </div>
                 </div>
-            </div>
+            </header>
+            <header class="menu mobile">
+
+            </header>
             <h1 class="highlight">
-                GermanPro Dog Washer - Machine Usage  from 01.06.2021. to 02.07.2021.
+                GermanPro Dog Washer Machine Usage  from 01.06.2021. to 02.07.2021.
             </h1>
-            <div class="search">
+            <section id="search">
                 <div id="single_date_row">
                     <span>
                         Show machine usage for date :
@@ -62,141 +66,143 @@
                     </span>
                     <button type="button">Show</button>
                 </div>
-            </div>
-            <table class="data-table desktop">
-                <thead>
+            </section>
+            <section id="data">
+                <table class="desktop">
+                    <thead>
+                        <tr>
+                            <th>Real working hours</th>
+                            <th>Paid working hours</th>
+                            <th>Machine time spent in pause</th>
+                            <th>Coins</th>
+                            <th>Cash</th>
+                            <th>Earnings (Dinars)</th>
+                        </tr>
+                    </thead>
                     <tr>
-                        <th>Real working hours</th>
-                        <th>Paid working hours</th>
-                        <th>Machine time spent in pause</th>
-                        <th>Coins</th>
-                        <th>Cash</th>
-                        <th>Earnings (Dinars)</th>
+                        <td>0d, 0h, 21m</td>
+                        <td>0d, 0h, 9m</td>
+                        <td>0d, 0h, 12m</td>
+                        <td>300</td>
+                        <td>150</td>
+                        <td>450</td>
                     </tr>
-                </thead>
-                <tr>
-                    <td>0d, 0h, 21m</td>
-                    <td>0d, 0h, 9m</td>
-                    <td>0d, 0h, 12m</td>
-                    <td>300</td>
-                    <td>150</td>
-                    <td>450</td>
-                </tr>
-            </table>
-            <table class="data-table desktop">
-                <thead>
-                    <tr>
-                        <th>Machine started</th>
-                        <th>Machine ended</th>
-                        <th>Actual operation (Minutes)</th>
-                        <th>Paid (Dinaras)</th>
-                        <th>Paid (Minutes)</th>
-                        <th>Edit</th>
-                        <th>Delete</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr id="record_1">
-                        <td>
-                            <label id="label_record_1_washing_started">
-                                08.06.2021 17:00:01
-                            </label>
-                        </td>
-                        <td>
-                            <label id="label_record_1_washing_ended">
-                                08.06.2021 17:07:00
-                            </label>
-                        </td>
-                        <td>
-                            <label id="label_record_1_running_time">
-                                7 
-                            </label>
-                        </td>
-                        <td>
-                            <label id="label_record_1_payed_money">
-                                150 
-                            </label>
-                        </td>
-                        <td>
-                            <label id="label_record_1_payed_minutes">
-                                3 
-                            </label>
-                        </td>
-                        <td>
-                            <div class="edit-button" onclick="edit_record('1')" ></div>
-                        </td>
-                        <td>
-                            <div class="delete-button" onclick="delete_record('1')"></div>
-                        </td>
-                    </tr>
-                        <tr id="record_2">
-                        <td>
-                            <label id="label_record_2_washing_started">
-                                10.06.2021 17:00:02
-                            </label>
-                        </td>
-                        <td>
-                            <label id="label_record_2_washing_ended">
-                                10.06.2021 17:07:01
-                            </label>
-                        </td>
-                        <td>
-                            <label id="label_record_2_running_time">
-                                7 
-                            </label>
-                        </td>
-                        <td>
-                            <label id="label_record_2_payed_money">
-                                150 
-                            </label>
-                        </td>
-                        <td>
-                            <label id="label_record_2_payed_minutes">
-                                3 
-                            </label>
-                        </td>
-                        <td>
-                            <div class="edit-button" onclick="edit_record('2')" ></div>
-                        </td>
-                        <td>
-                            <div class="delete-button" onclick="delete_record('2')"></div>
-                        </td>
-                    </tr>
-                        <tr id="record_3">
-                        <td>
-                            <label id="label_record_3_washing_started">
-                                17.06.2021 17:00:00
-                            </label>
-                        </td>
-                        <td>
-                            <label id="label_record_3_washing_ended">
-                                17.06.2021 17:07:00
-                            </label>
-                        </td>
-                        <td>
-                            <label id="label_record_3_running_time">
-                                7 
-                            </label>
-                        </td>
-                        <td>
-                            <label id="label_record_3_payed_money">
-                                150 
-                            </label>
-                        </td>
-                        <td>
-                            <label id="label_record_3_payed_minutes">
-                                3 
-                            </label>
-                        </td>
-                        <td>
-                            <div class="edit-button" onclick="edit_record('3')" ></div>
-                        </td>
-                        <td>
-                            <div class="delete-button" onclick="delete_record('3')"></div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+                </table>
+                <table class="desktop">
+                    <thead>
+                        <tr>
+                            <th>Machine started</th>
+                            <th>Machine ended</th>
+                            <th>Actual operation (Minutes)</th>
+                            <th>Paid (Dinaras)</th>
+                            <th>Paid (Minutes)</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr id="record_1">
+                            <td>
+                                <label id="label_record_1_washing_started">
+                                    08.06.2021 17:00:01
+                                </label>
+                            </td>
+                            <td>
+                                <label id="label_record_1_washing_ended">
+                                    08.06.2021 17:07:00
+                                </label>
+                            </td>
+                            <td>
+                                <label id="label_record_1_running_time">
+                                    7 
+                                </label>
+                            </td>
+                            <td>
+                                <label id="label_record_1_payed_money">
+                                    150 
+                                </label>
+                            </td>
+                            <td>
+                                <label id="label_record_1_payed_minutes">
+                                    3 
+                                </label>
+                            </td>
+                            <td>
+                                <button id="edit-button" onclick="edit_record('1')" ></button>
+                            </td>
+                            <td>
+                                <button id="delete-button" onclick="delete_record('1')"></button>
+                            </td>
+                        </tr>
+                            <tr id="record_2">
+                            <td>
+                                <label id="label_record_2_washing_started">
+                                    10.06.2021 17:00:02
+                                </label>
+                            </td>
+                            <td>
+                                <label id="label_record_2_washing_ended">
+                                    10.06.2021 17:07:01
+                                </label>
+                            </td>
+                            <td>
+                                <label id="label_record_2_running_time">
+                                    7 
+                                </label>
+                            </td>
+                            <td>
+                                <label id="label_record_2_payed_money">
+                                    150 
+                                </label>
+                            </td>
+                            <td>
+                                <label id="label_record_2_payed_minutes">
+                                    3 
+                                </label>
+                            </td>
+                            <td>
+                                <button id="edit-button" onclick="edit_record('2')" ></button>
+                            </td>
+                            <td>
+                                <button id="delete-button" onclick="delete_record('2')"></button>
+                            </td>
+                        </tr>
+                            <tr id="record_3">
+                            <td>
+                                <label id="label_record_3_washing_started">
+                                    17.06.2021 17:00:00
+                                </label>
+                            </td>
+                            <td>
+                                <label id="label_record_3_washing_ended">
+                                    17.06.2021 17:07:00
+                                </label>
+                            </td>
+                            <td>
+                                <label id="label_record_3_running_time">
+                                    7 
+                                </label>
+                            </td>
+                            <td>
+                                <label id="label_record_3_payed_money">
+                                    150 
+                                </label>
+                            </td>
+                            <td>
+                                <label id="label_record_3_payed_minutes">
+                                    3 
+                                </label>
+                            </td>
+                            <td>
+                                <button id="edit-button" onclick="edit_record('3')" ></button>
+                            </td>
+                            <td>
+                                <button id="delete-button" onclick="delete_record('3')"></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
             <div class="footer">
                 <div class="contact">
                     <a href="http://www.germanpro.net" target="_blank"> www.germanpro.net </a><br/>
@@ -287,8 +293,8 @@
                     </div>
                 </form>
             </div>
-        </div>
-    </div>
-</div>
+            <script src="js/table.js"></script>
+        </main>
+
     </body>
 </html>

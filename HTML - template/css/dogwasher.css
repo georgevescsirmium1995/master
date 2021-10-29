@@ -11,8 +11,24 @@ html, body, .main-data
 {
     font-size: 14px;
 }
+@media only screen and (max-width: 600px) 
+{
+    :root 
+    {
+        font-size: 12px;
+    }
+}
+@media only screen and (max-width: 500px) 
+{
+    :root 
+    {
+        font-size: 10px;
+    }
+}
+
 body
 {
+    min-width: min-content;
     font-family: sans-serif;
     background-image: url('../images/background.jpg'); 
     background-size: 100% auto;
@@ -32,7 +48,6 @@ body
     flex-direction: column;
     align-items: center;
 }
-
 /* Definitions for Menu */
 
 .menu
@@ -40,11 +55,12 @@ body
     background-color: #2a7bcf;
     color: #ffffff;
     margin-bottom: 1rem;
-    border-bottom: #000000 5px solid;
+    border-bottom: #000000 3px solid;
     padding: .35rem .7rem .7rem .7rem;
     width: 100%;
     display: flex;
     justify-content: space-between;
+    /* align-items: baseline; */
 }
 .highlight-left
 {
@@ -54,10 +70,12 @@ body
 {
     min-width: max-content;
     display: flex;
+    /* align-items: baseline; */
 }
 .language-container
 {
     display: flex;
+    /* align-items: baseline; */
 }
 .language-instance
 {
@@ -77,41 +95,42 @@ body
 {
     background-color: #2a7bcf;
     color: #ffffff;
-    padding: 0 1rem;
+    padding: 1rem 1rem .5rem 1rem;
     margin-bottom: 1rem;
-    border-bottom: #000000 5px solid;
-    height: 6.8rem;
-    display: grid;
-    place-items: center;
+    border-bottom: #000000 3px solid;
+    /* height: 6.8rem; */
     align-self: stretch;
+    font-size: 2rem;
 }
 
 /* Defititions for Search */
 
-.search 
+#search 
 {
-    width: 550px;
+    width: min(39rem, 90%);
+    min-width: max-content;
     align-self: center;
 }
-.search > div 
+#search > div 
 {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.search span 
+#search span 
 {
     vertical-align: center;
 }
-.search input[type=text] 
+#search input[type=text] 
 {
     padding: 2px;
     text-align: center;
     width: 12ch;
+    font-size: inherit;
 }
-button 
+#search button 
 {
-    background-color: white; 
+    background-color: transparent; 
     color: black; 
     border: 2px solid #2a7bcf;
     padding: .3rem 2.3rem;
@@ -122,76 +141,95 @@ button
     transition-duration: 0.4s;
     cursor: pointer;
     border-radius: 1.4em;
+    font-size: inherit;
 } 
-button:hover 
+#search button:hover 
 {
     background-color: #2a7bcf;
     color: white;
 }
 
 /* Defititions for Data Table */
-
-.data-table 
+#data
+{
+    display: contents;
+}
+#data table 
 {
     table-layout: fixed;
     border-collapse: collapse;
     max-width: 100%;
     margin: 1rem 0;
 }
-.data-table th, .data-table td 
+#data table th, #data table td 
 {
     padding: .8em 1.3em;
     text-align: center;
 }
-.data-table th 
+#data table.mobile
+{
+    width: 70vw;
+}
+
+#data table.mobile th 
+{
+    text-align: left;
+    width: 35vw;
+}
+#data table.mobile td {
+    width: 35vw;
+}
+#data table th 
 {
     background-color: #2a7bcf;
     color: #ffffff;
 }
-.data-table, .data-table tbody 
+#data table, #data table tbody 
 {
     box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, .1);
 }
-.data-table tbody tr 
+#data table.desktop tbody tr 
 {
     border-bottom: 1px solid #dddddd;
 }
-.data-table tbody tr:nth-of-type(even) 
+#data table tbody tr:nth-of-type(even) 
 {
     background-color: #f3f3f3;
 }
-.data-table tbody tr:last-of-type 
+#data table tbody tr:nth-of-type(odd) 
+{
+    background-color: #fff;
+}
+#data table.desktop tbody tr:last-of-type 
 {
     border-bottom: 2px solid #2a7bcf;
 }
-.data-table tbody tr.active-row 
+#data table button 
 {
-    font-weight: bold;
-    color: #2a7bcf;
+    width: 100%;
+    height: 2.3rem;    
+    background-color: transparent;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    border: none;
 }
-.edit-button
+#edit-button
 {
-    width: 2.3rem;
-    height: 2.3rem;
-    background: url("../images/edit_normal.png") no-repeat;
-    display: inline-block;
+    background-image: url("../images/edit_normal.png");
 }
-.edit-button:hover 
+#edit-button:hover 
 {
-    background: url("../images/edit_hover.png") no-repeat;
+    background-image: url("../images/edit_hover.png");
 }
-.delete-button
+#delete-button
 {
-    width: 2.3rem;
-    height: 2.3rem;
-    background: url("../images/delete_normal.png") no-repeat;
-    display: inline-block;
+    background-image: url("../images/delete_normal.png");
 }
-.delete-button:hover 
+#delete-button:hover 
 {
-    width: 2.3rem;
-    height: 2.3rem;
-    background: url("../images/delete_hover.png") no-repeat;
+    background-image: url("../images/delete_hover.png");
 }
 
 /* Definitions for Footer */
@@ -238,6 +276,13 @@ button:hover
     padding: 1rem;
     text-align: left;
 }
+.modal input[type=text]
+{
+    width: 100%;
+    padding: .9rem 1.4rem;
+    margin: .6rem 0;
+    border: 1px solid #ccc;
+}
 .modal-buttons 
 {
     margin: 0 auto;
@@ -268,5 +313,40 @@ button:hover
 a, a:link, a:visited 
 {
     color:#ffffff;
+}
+
+
+/* Media Queries */
+
+@media only screen and (min-width: 800px) 
+{
+    /* for desktop */
+    .mobile
+    {
+        display: none;
+    }
+}
+@media only screen and (max-width: 799px) 
+{
+    /* for mobile */
+    .desktop 
+    {
+        display: none;
+    }
+    .mobile
+    {
+        display: block;
+    }
+
+    .main-data
+    {
+        width: 100%;
+        background-color: transparent;
+        border: none;
+    }
+    .footer
+    {
+        min-height: 50vw;
+    }
 }
 

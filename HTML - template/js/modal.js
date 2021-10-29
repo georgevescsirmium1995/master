@@ -1,19 +1,4 @@
-function is_integer(number)
-{
-    if (Number.isInteger(number) && number>=0) return true;
-    return false;
-}
 
-function is_valid_date(dateString) {
-    var patt = new RegExp(/^([0-2][0-9]{3})\-(0[1-9]|1[0-2])\-([0-2][0-9]|3[0-1]) ([0-1][0-9]|2[0-3]):([0-5][0-9])\:([0-5][0-9])( ([\-\+]([0-1][0-9])\:00))?$/);
-    return patt.test(dateString);
-}
-
-var html_new_line = "<br/>";
-var html_li_open = "<li>";
-var html_li_closed = "</li>";
-var html_ul_open = "<ul class=\"error-message-edit\">";
-var html_ul_closed = "</ul>";
 
 $( document ).ready(function() {
 
@@ -50,16 +35,6 @@ $( document ).ready(function() {
     $("#edit-btn-cancel").click(function(){
         $("#edit-record-modal").css("display","none");
     }); 
-
-    $("#select-eng-button").click(function(){
-        $("#select-eng").trigger('submit');
-    });
-    $("#select-srb-button").click(function(){
-        $("#select-srb").trigger('submit');
-    });
-    $("#select-ger-button").click(function(){
-        $("#select-ger").trigger('submit');
-    });
 });
 
 
