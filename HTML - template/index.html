@@ -16,7 +16,7 @@
         <main class="main-data">
             <header class="menu desktop">
                 <div class="highlight-left">
-                    Current date : <time>02.07.2021.</time>
+                    Current date : <time class="current-date">02.07.2021.</time>
                 </div>
                 <div class="highlight-right">
                     <div class="language-container">
@@ -42,6 +42,39 @@
             </header>
             <header class="menu mobile">
 
+                <nav id="user-panel">
+                    <div class="highlight-left">
+                        Current date : <br/>
+                        <time class="current-date">02.07.2021.</time>
+                    </div>
+                    <div class="user-panel">
+                        User :
+                        <label id="user-panel-label" class="link-effect" >sch4zr</label>
+                        <a href="logout.php">Logout</a>
+                    </div>     
+                </nav>
+                <div id="side-panel">
+                    <div>Change password</div>
+                    <div>Logout</div>
+                    <div>Languages</div>
+                    <div class="language-instance" id="select-eng-button">
+                        <img src="images/languages/english_flag.gif" alt="British flag"> 
+                        <span>English</span>
+                    </div>
+                    <div class="language-instance" id="select-srb-button">
+                        <img src="images/languages/serbian_flag.gif" alt="Serbian flag"> 
+                        <span>Srpski</span>
+                    </div>
+                    <div class="language-instance" id="select-ger-button">
+                        <img src="images/languages/german_flag.gif" alt="German flag"> 
+                        <span>Deutsche</span>
+                    </div>
+                </div>
+                <button id="hamburger-toggle" type="button" value="Off">
+                    <span class="line line1"></span>
+                    <span class="line line2"></span>
+                    <span class="line line3"></span>
+                </button>
             </header>
             <h1 class="highlight">
                 GermanPro Dog Washer Machine Usage  from 01.06.2021. to 02.07.2021.
@@ -293,7 +326,7 @@
                     </div>
                 </form>
             </div>
-            <script src="js/table.js"></script>
+            <script src="js/index.js"></script>
         </main>
 
     </body>
