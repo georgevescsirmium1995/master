@@ -83,7 +83,7 @@ body
     color: #ffffff;
     margin-bottom: 1rem;
     border-bottom: #000000 3px solid;
-    padding: .35rem .7rem .7rem .7rem;
+    padding: .35rem .7rem .35rem .7rem;
     width: 100%;
     justify-content: space-between;
 
@@ -323,6 +323,9 @@ body
 #data table.mobile td {
     padding: .8rem 1.3rem;
     width: 35vw;
+}
+#data table.desktop th {
+    padding: .8rem 1rem;
 }
 #data table th 
 {
