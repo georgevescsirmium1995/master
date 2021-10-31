@@ -13,16 +13,22 @@
                 <div class="language-highlight">
                     <div class="language-container">
                         <div class="language-instance" id="select-eng-button">
-                                <img src="images/languages/english_flag.gif" alt="British flag"> 
-                                <span>English</span>
+                            <form id="select-eng" name="select-eng" action="login.php" method="POST">
+                                <img class="language-image" src="images/languages/english_flag.gif" alt="British flag"> <div class="language-text">&nbsp;English</div>  
+                                <input name="selected-language" type="hidden" value="eng">
+                            </form>
                         </div>
                         <div class="language-instance" id="select-srb-button">
-                                <img src="images/languages/serbian_flag.gif" alt="Serbian flag"> 
-                                <span>Srpski</span>
+                            <form id="select-srb" name="select-srb" action="login.php" method="POST">
+                                <img class="language-image" src="images/languages/serbian_flag.gif" alt="Serbian flag"> <div class="language-text">&nbsp;Srpski</div>
+                                <input name="selected-language" type="hidden" value="srb">
+                            </form>
                         </div>
                         <div class="language-instance" id="select-ger-button">
-                                <img src="images/languages/german_flag.gif" alt="German flag"> 
-                                <span>Deutsche</span>
+                            <form id="select-ger" name="select-ger" action="login.php" method="POST">
+                                <img class="language-image" src="images/languages/german_flag.gif" alt="German flat"> <div class="language-text">&nbsp;Deutsche</div>
+                                <input name="selected-language" type="hidden" value="ger">
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -32,10 +38,10 @@
                     </div>
                     <div class="container">
                         <label for="username"><b>Username</b></label>
-                        <input type="text" placeholder="Enter username" id="username" name="username" required>
+                        <input type="text" placeholder="Enter username" id="username" name="username" required="" value="admin">
 
                         <label for="password"><b>Password</b></label>
-                        <input type="password" placeholder="Enter password" id="password" name="password" required>
+                        <input type="password" placeholder="Enter password" id="password" name="password" required="">
                                                 <button type="submit" class="login-button">Login</button>
                     </div>
                 </form>

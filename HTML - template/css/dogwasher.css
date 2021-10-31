@@ -58,6 +58,7 @@ body
         width: 100%;
         background-color: transparent;
         border: none;
+        text-align: center;
     }
 }
 
@@ -112,6 +113,7 @@ body
 {
     margin-left: .7rem;
     margin-right: .7rem;
+    cursor: pointer;
 }
 
 @media only screen and (max-width: 799px) 
@@ -152,7 +154,7 @@ body
     box-shadow: 0 0 4px rgb(160, 160, 160);
     transition: all .8s cubic-bezier(0.18, 0.89, 0.32, 1.28);
     text-align: left;
-    font-size: 1.8rem;
+    font-size: 1.25rem;
     color: white;
 }
 #side-panel > div
@@ -175,7 +177,7 @@ body
     display: flex;
     justify-content: space-around;
     align-items: center;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     transform: translateX(100%);
     transition: all .8s cubic-bezier(0.18, 0.89, 0.32, 1.28);
 }
