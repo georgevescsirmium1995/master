@@ -20,6 +20,7 @@ body
     height: 100%;
     font-size: 0.9em;
     font-family: sans-serif;
+    overflow: hidden;
 }
 
 .main-data {
@@ -36,6 +37,15 @@ body
     left: 0;
     right: 0;
     overflow: hidden;
+}
+
+.section{ 
+    width: 800px;
+    height: 600px;
+    margin-top: 50px;
+    margin-left: 250px;
+    border: solid black 1px;
+    background: #e6e3dc;
 }
 
 /* Defititions for Data Table */
@@ -235,6 +245,7 @@ a, a:link, a:visited {
     width: 450px;
 }
 
+
 /* login page*/
 
 
@@ -291,11 +302,8 @@ a, a:link, a:visited {
     background-color: #fefefe;
     margin: 5% auto 15% auto; 
     border: 1px solid #888;
-    width: min(90vw, 600px); 
+    width: 30%; 
 }
-  
-  
-
 .animate {
     -webkit-animation: animatezoom 0.6s;
     animation: animatezoom 0.6s
@@ -344,7 +352,6 @@ a, a:link, a:visited {
     text-align: center;
     width: 50%;
     height: 25px;
-    display: flex;
 }
 
 .language-container-main
@@ -354,14 +361,9 @@ a, a:link, a:visited {
 
 .language-instance
 {
-    min-width: max-content;
-
-    cursor: pointer;
-}
-.language-instance > form 
-{
-    display: flex;
-    align-items: baseline;
+    text-align: center;
+    width: 33%;
+    float:left;
 }
 
 .language-instance:hover
@@ -374,7 +376,7 @@ a, a:link, a:visited {
     text-align: center;
     margin-left: 5px;
     margin-right: 5px;
-    /* float:left; */
+    float:left;
 }
 
 .language-instance-main:hover
@@ -422,13 +424,30 @@ a, a:link, a:visited {
     width: 80%;
 }
 
+.language-image
+{
+    float: left;
+    padding-top: 4px;
+
+}
 
 
 /* media query */
 
 /* small screen size (small) --smal */
 
+@media screen and (min-width: 640px) {
 
+    .language-image
+    {
+        padding-left: 30%;
+    }
+
+    .language-text
+    {
+        display: none;
+    }
+}
 
 /* medium screen size (medium) --medium */
 
@@ -470,3 +489,15 @@ a, a:link, a:visited {
     }
 }
 
+@media only screen and (max-width: 795px) {
+    .Navbar__Items,
+    .Navbar {
+      flex-direction: column;
+    }
+    .Navbar__Items {
+        display:none;
+      }
+    .Navbar__Items--right {
+      margin-left: 0;
+    }
+  }
