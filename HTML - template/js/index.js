@@ -34,6 +34,7 @@ function toggleHamburgerMenu(toggle) {
     const menu = document.querySelector('.menu.mobile')
     const userPanel = document.getElementById('user-panel')
     const sidePanel = document.getElementById('side-panel')
+    menu.dataset.toggle = toggle
     if(toggle === "On"){
         menu.style.backgroundPosition = '-80% 0';
         userPanel.style.transform = 'translateX(0)'
