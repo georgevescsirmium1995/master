@@ -24,7 +24,7 @@ $( document ).ready(function() {
 
     // register button clicks
 
-    $("#user-panel-label").click(function(){
+    $(".user-panel-label").click(function(){
         $("#edit-user-password-modal").css("display","block");
     }); 
 
