@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="sr">
+    <head>
+        <title>GermanPro Dog Washer - Machine Stats</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/dogwasher.css">
+        <link rel="stylesheet" href="css/jquery-ui.css"/>
+        <script src="js/jquery-3.6.0.min.js"></script>
+        <script src="js/jquery-ui.js"></script>
+        <script src="js/modal.js" ></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            </head>
+    <body>
+        <main class="main-data">
+            <header class="menu desktop">
+                <div class="highlight-left">
+                    Current date : <time class="current-date">02.07.2021.</time>
+                </div>
+                <div class="highlight-right">
+                    <div class="language-container">
+                        <div class="language-instance" id="select-eng-button">
+                                <img src="images/languages/english_flag.gif" alt="British flag"> 
+                                <span>English</span>
+                        </div>
+                        <div class="language-instance" id="select-srb-button">
+                                <img src="images/languages/serbian_flag.gif" alt="Serbian flag"> 
+                                <span>Srpski</span>
+                        </div>
+                        <div class="language-instance" id="select-ger-button">
+                                <img src="images/languages/german_flag.gif" alt="German flag"> 
+                                <span>Deutsche</span>
+                        </div>
+                    </div>
+                    <div class="user-panel">
+                        User :
+                        <label id="user-panel-label" class="link-effect" >sch4zr</label>
+                        <a href="logout.php">Logout</a>
+                    </div>
+                </div>
+            </header>
+            <header class="menu mobile">
+                <nav id="user-panel">
+                    <div class="highlight-left">
+                        Current date : <time class="current-date">02.07.2021.</time>
+                    </div>
+                    <div class="user-panel">
+                        User :
+                        <label id="user-panel-label" class="link-effect" >sch4zr</label>
+                    </div>     
+                </nav>
+                <div id="side-panel">
+                    <div>Change password</div>
+                    <div>Logout</div>
+                    <div>Languages</div>
+                    <div class="language-instance" id="select-eng-button">
+                        <img src="images/languages/english_flag.gif" alt="British flag"> 
+                        <span>English</span>
+                    </div>
+                    <div class="language-instance" id="select-srb-button">
+                        <img src="images/languages/serbian_flag.gif" alt="Serbian flag"> 
+                        <span>Srpski</span>
+                    </div>
+                    <div class="language-instance" id="select-ger-button">
+                        <img src="images/languages/german_flag.gif" alt="German flag"> 
+                        <span>Deutsche</span>
+                    </div>
+                </div>
+                <button id="hamburger-toggle" type="button" value="Off">
+                    <span class="line line1"></span>
+                    <span class="line line2"></span>
+                    <span class="line line3"></span>
+                </button>
+            </header>
+            <h1 class="highlight">
+                GermanPro Dog Washer Machine Usage  from 01.06.2021. to 02.07.2021.
+            </h1>
+            <section id="search">
+                <div id="single_date_row">
+                    <span>
+                        Show machine usage for date :
+                        <input name="single_date" id="single_date" type="text" autocomplete="off" placeholder="yyyy-mm-dd" readonly> 
+                        <input name="forward" id ="forward" type="checkbox">
+                         until today.
+                    </span>
+                    <button type="button">Show</button>
+                </div>
+
+                <div id="date_from_row">
+                    <span>
+                        Show machine usage from
+                        <input name="date_from" id="date_from" type="text" autocomplete="off" placeholder="yyyy-mm-dd" readonly>
+                        to 
+                        <input name="date_to" id="date_to" type="text" autocomplete="off" placeholder="yyyy-mm-dd" readonly>
+                    </span>
+                    <button type="button">Show</button>
+                </div>
+            </section>
+            <section id="data">
+                <table class="desktop">
+                    <thead>
+                        <tr>
+                            <th>Real working hours</th>
+                            <th>Paid working hours</th>
+                            <th>Machine time spent in pause</th>
+                            <th>Coins</th>
+                            <th>Cash</th>
+                            <th>Earnings (Dinars)</th>
+                        </tr>
+                    </thead>
+                    <tr>
+                        <td>0d, 0h, 21m</td>
+                        <td>0d, 0h, 9m</td>
+                        <td>0d, 0h, 12m</td>
+                        <td>300</td>
+                        <td>150</td>
+                        <td>450</td>
+                    </tr>
+                </table>
+                <table class="desktop">
+                    <thead>
+                        <tr>
+                            <th>Machine started</th>
+                            <th>Machine ended</th>
+                            <th>Actual operation (Minutes)</th>
+                            <th>Paid (Dinaras)</th>
+                            <th>Paid (Minutes)</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr id="record_1">
+                            <td>
+                                <label id="label_record_1_washing_started">
+                                    08.06.2021 17:00:01
+                                </label>
+                            </td>
+                            <td>
+                                <label id="label_record_1_washing_ended">
+                                    08.06.2021 17:07:00
+                                </label>
+                            </td>
+                            <td>
+                                <label id="label_record_1_running_time">
+                                    7 
+                                </label>
+                            </td>
+                            <td>
+                                <label id="label_record_1_payed_money">
+                                    150 
+                                </label>
+                            </td>
+                            <td>
+                                <label id="label_record_1_payed_minutes">
+                                    3 
+                                </label>
+                            </td>
+                            <td>
+                                <button id="edit-button" onclick="edit_record('1')" ></button>
+                            </td>
+                            <td>
+                                <button id="delete-button" onclick="delete_record('1')"></button>
+                            </td>
+                        </tr>
+                            <tr id="record_2">
+                            <td>
+                                <label id="label_record_2_washing_started">
+                                    10.06.2021 17:00:02
+                                </label>
+                            </td>
+                            <td>
+                                <label id="label_record_2_washing_ended">
+                                    10.06.2021 17:07:01
+                                </label>
+                            </td>
+                            <td>
+                                <label id="label_record_2_running_time">
+                                    7 
+                                </label>
+                            </td>
+                            <td>
+                                <label id="label_record_2_payed_money">
+                                    150 
+                                </label>
+                            </td>
+                            <td>
+                                <label id="label_record_2_payed_minutes">
+                                    3 
+                                </label>
+                            </td>
+                            <td>
+                                <button id="edit-button" onclick="edit_record('2')" ></button>
+                            </td>
+                            <td>
+                                <button id="delete-button" onclick="delete_record('2')"></button>
+                            </td>
+                        </tr>
+                            <tr id="record_3">
+                            <td>
+                                <label id="label_record_3_washing_started">
+                                    17.06.2021 17:00:00
+                                </label>
+                            </td>
+                            <td>
+                                <label id="label_record_3_washing_ended">
+                                    17.06.2021 17:07:00
+                                </label>
+                            </td>
+                            <td>
+                                <label id="label_record_3_running_time">
+                                    7 
+                                </label>
+                            </td>
+                            <td>
+                                <label id="label_record_3_payed_money">
+                                    150 
+                                </label>
+                            </td>
+                            <td>
+                                <label id="label_record_3_payed_minutes">
+                                    3 
+                                </label>
+                            </td>
+                            <td>
+                                <button id="edit-button" onclick="edit_record('3')" ></button>
+                            </td>
+                            <td>
+                                <button id="delete-button" onclick="delete_record('3')"></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <div class="footer">
+                <div class="contact">
+                    <a href="http://www.germanpro.net" target="_blank"> www.germanpro.net </a><br/>
+                    <a href="mailto:order@germanpro.net"> order@germanpro.net </a><br/>
+                    tel: 060/60-70-100 Viber / WhatsApp
+                </div>
+            </div>
+
+            <div id="edit-record-modal" class="modal">
+                <form class="modal-content animate" id="edit-record-form" name="edit-record-form">
+                    <div class="highlight">
+                        Edit record
+                    </div>
+                    <input type="hidden" name="edit-entry-id" id="edit-entry-id" >
+                    <label for="edit-work-started"><b>Machine starded</b></label>
+                    <input type="text" placeholder="Enter time machine started" name="edit-work-started" id="edit-work-started" required>
+
+                    <label for="edit-work-ended"><b>Machine ended</b></label>
+                    <input type="text" placeholder="Enter time machine ended" name="edit-work-ended" id="edit-work-ended" required>
+
+                    <label for="edit-real-work"><b>Actual operation (Minutes)</b></label>
+                    <input type="text" placeholder="Enter actual operation (Minutes)" name="edit-real-work" id="edit-real-work" required>
+
+                    <label for="edit-coins"><b>Paid (Coins)</b></label>
+                    <input type="text" placeholder="Enter paid amount in coins" name="edit-coins" id="edit-coins" required>
+
+                    <label for="edit-cash"><b>Paid (Cash)</b></label>
+                    <input type="text" placeholder="Enter paid amount in cash" name="edit-cash" id="edit-cash" required>
+
+                    <label for="edit-payed-total"><b>Paid (Coins + Cash)</b></label>
+                    <input type="text" placeholder="Enter total paid amount" name="edit-payed-total" id="edit-payed-total" required>
+
+                    <label for="edit-payed-minutes"><b>Paid (Minutes)</b></label>
+                    <input type="text" placeholder="Enter paid machine time in minutes" name="edit-payed-minutes" id="edit-payed-minutes" required>
+
+                    <div class="modal-buttons">
+                        <button id="edit-btn-confirm" name="edit-btn-confirm" type="button">Confirm</button>
+                        <button id="edit-btn-cancel" name="edit-btn-cancel" type="button">Cancel</button>
+                    </div>
+                </form>
+            </div>
+            <div>
+                <input type="hidden" id="delete_record_dialog_title" name="delete_record_dialog_title" value="Confirm deleting the record" />
+                <input type="hidden" id="delete_record_dialog_message" name="delete_record_dialog_nessage" value="Do you want to delete the record?" />
+                <input type="hidden" id="delete_record_dialog_confirm" name="delete_record_dialog_confirm" value="Yes" />
+                <input type="hidden" id="delete_record_dialog_cancel" name="delete_record_dialog_cancel" value="No" />
+
+                <input type="hidden" id="edit_record_dialog_title" name="edit_record_dialog_title" value="Not all fields are filled" />
+                <input type="hidden" id="edit_record_dialog_message" name="edit_record_dialog_message" value="Please fill in all fields!" />
+                <input type="hidden" id="edit_record_dialog_confirm" name="edit_record_dialog_confirm" value="OK" />
+            
+                <input type="hidden" id="edit-work-started-error" name="edit-work-started-error" value="Date and time of Machine started are not in proper format." />
+                <input type="hidden" id="edit-work-ended-error" name="edit-work-ended-error" value="Date and time of Machine ended are not in proper format." />
+                <input type="hidden" id="edit-real-work-error" name="edit-real-work-error" value="Value of field Actual operation (Minutes) must be a whole number." />
+                <input type="hidden" id="edit-coins-error" name="edit-coins-error" value="Value of field Paid (Coins) must be a whole number." />
+                <input type="hidden" id="edit-cash-error" name="edit-cash-error" value="Value of field Paid (Cash) must be a whole number." />
+                <input type="hidden" id="edit-payed-total-error" name="edit-payed-total-error" value="Value of field Paid (Coins + Cash) must be a whole number." />
+                <input type="hidden" id="edit-payed-minutes-error" name="edit-payed-minutes-error" value="Value of field Paid (Minutes) must be a whole number." />
+
+                <input type="hidden" id="edit-error-info-title" name="edit-error-info-title" value="Information " />
+                <input type="hidden" id="edit-error-info-message-part-one" name="edit-error-info-message-part-one" value="The values of the following fields do not have adequate values. " />
+                <input type="hidden" id="edit-error-info-message-part-two" name="edit-error-info-message-part-two" value="Please correct the values of the fields listed. " />
+                <input type="hidden" id="edit-error-info-confirm" name="edit-error-info-confirm" value="OK" />
+            
+                <input type="hidden" id="user-current-password-error" name="user-current-password-error" value="The current password is incorrect." />
+                <input type="hidden" id="user-password-missmatch-error" name="user-password-missmatch-error" value="New and confirmed passwords do not match." />
+            
+                <input type="hidden" id="user-password-changed" name="user-password-changed" value="Password changed." />    
+            </div>
+            <div id="edit-user-password-modal" class="modal">
+                <form class="modal-content animate" id="edit-user-password-form" name="edit-user-password-form">
+                    <div class="highlight">
+                        Edit password
+                    </div>
+                    <input type="hidden" name="edit-user-password-username" id="edit-user-password-username" value="sch4zr" >
+                    <label for="edit-user-current-password"><b>Current password</b></label>
+                    <input type="password" placeholder="Enter your current password" name="edit-user-current-password" id="edit-user-current-password" required>
+
+                    <label for="edit-user-password-new"><b>New password</b></label>
+                    <input type="password" placeholder="Enter your new password" name="edit-user-password-new" id="edit-user-password-new" required>
+
+                    <label for="edit-user-password-repeat"><b>Verify password</b></label>
+                    <input type="password" placeholder="Verify your new password" name="edit-user-password-repeat" id="edit-user-password-repeat" required>
+
+                    <div class="modal-buttons">
+                        <button id="user-btn-confirm" name="user-btn-confirm" type="button">Confirm</button>
+                        <button id="user-btn-cancel" name="user-btn-cancel" type="button">Cancel</button>
+                    </div>
+                </form>
+            </div>
+            <script src="js/index.js"></script>
+        </main>
+
+    </body>
+</html>
