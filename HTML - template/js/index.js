@@ -37,7 +37,7 @@ function toggleHamburgerMenu(toggle) {
     if(toggle === "On"){
         menu.style.backgroundPosition = '-80% 0';
         userPanel.style.transform = 'translateX(0)'
-        sidePanel.style.transform = 'translateX(50%)'
+        sidePanel.style.transform = 'translateX(0%)'
     }
     if(toggle === "Off"){
         menu.style.backgroundPosition = 'center';

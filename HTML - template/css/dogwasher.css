@@ -106,7 +106,6 @@ body
 .language-instance
 {
     margin-left: .35rem;
-    margin-right: .35rem;
     cursor: pointer;
 }
 .user-panel
@@ -139,7 +138,7 @@ body
     background-position: center;
     background-repeat: no-repeat;
     position: relative;
-    transition: all .8s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+    transition: all .8s cubic-bezier(0.22, 0.61, 0, 0.96);
 }
 .menu.mobile #side-panel 
 {
@@ -147,13 +146,13 @@ body
     z-index: 1;
     background-color: white;
     height: calc(100vh - var(--size));
-    width: 100%;
+    width: 50%;
     right: 0;
     top: var(--size);
     transform: translateX(100%);
     box-shadow: 0 0 4px rgb(160, 160, 160);
-    transition: all .8s cubic-bezier(0.18, 0.89, 0.32, 1.28);
-    text-align: left;
+    transition: all .8s cubic-bezier(0.22, 0.61, 0, 0.96);
+    text-align: center;
     font-size: 1.25rem;
     color: white;
 }
@@ -179,7 +178,7 @@ body
     align-items: center;
     font-size: 1.25rem;
     transform: translateX(100%);
-    transition: all .8s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+    transition: all .8s cubic-bezier(0.22, 0.61, 0, 0.96);
 }
 #hamburger-toggle 
 {
@@ -203,7 +202,7 @@ body
     border-radius: .2rem;
     transform: none;
     opacity: 1;
-    transition: all .8s cubic-bezier(0.18, 0.89, 0.32, 1.28);
+    transition: all .8s cubic-bezier(0.22, 0.61, 0, 0.96);
 }
 #hamburger-toggle[value="On"] .line
 {
@@ -270,12 +269,13 @@ body
     width: 12ch;
     font-size: inherit;
 }
-#search button 
+#search button ,
+.modal-buttons button
 {
     background-color: transparent; 
     color: black; 
     border: 2px solid #2a7bcf;
-    padding: .3rem 2.3rem;
+    padding: .1rem 2rem;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -395,6 +395,13 @@ body
     justify-content: flex-end;
     align-self: stretch;
 }
+.footer::after
+{
+    content: '';
+    display: block;
+    background-color: white;
+    height: 2rem;
+}
 .contact 
 {
     color: white;
@@ -402,8 +409,7 @@ body
     background-color: #2a7bcf;
     padding: .85rem 1rem;
     margin-top: .7rem;
-    border-bottom: #000000 2px solid;
-    
+    border-bottom: #000000 2px solid;  
 }
 
 /* Definitions for Modals */
@@ -424,17 +430,18 @@ body
 {
     background-color: #fefefe;
     border: 1px solid #888;
-    width: 30%; 
+    width: max(30%, 30rem);
+
     margin: 1rem auto;
 
-    padding: 1rem;
+    padding: .5rem;
     text-align: left;
 }
 .modal input[type=text]
 {
     width: 100%;
-    padding: .9rem 1.4rem;
-    margin: .6rem 0;
+    padding: .6rem .6rem;
+    margin: .1rem 0 .6rem 0;
     border: 1px solid #ccc;
 }
 .modal-buttons 
