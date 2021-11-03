@@ -517,7 +517,10 @@ a, a:link, a:visited
 
 /* Login Rules */
 /* ********************************************** */
-
+* {
+    margin: 0 auto;
+    padding: 0;
+}
 
 html.login
 { 
