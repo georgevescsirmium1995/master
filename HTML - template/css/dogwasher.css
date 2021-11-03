@@ -519,7 +519,7 @@ a, a:link, a:visited
 /* ********************************************** */
 
 
-html.login 
+html.login
 { 
     background: url('../images/background.jpg') no-repeat center center fixed; 
     -webkit-background-size: cover;
@@ -536,7 +536,6 @@ body.login
     height: 100%;
     font-size: 0.9em;
     font-family: sans-serif;
-    overflow: hidden;
 }
 
 .login .main-data {
