@@ -156,7 +156,6 @@ body
     transition: all .8s cubic-bezier(0.22, 0.61, 0, 0.96);
     text-align: center;
     font-size: 1.25rem;
-    color: white;
 }
 .index #side-panel::after {
     content: '';
