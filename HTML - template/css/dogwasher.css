@@ -1,5 +1,5 @@
 * {
-    margin: 0 auto;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
@@ -309,7 +309,7 @@ body
 }
 .index #data table.mobile
 {
-    width: 70vw;
+    width: 80vw;
 }
 
 .index #data table.mobile th 
@@ -512,6 +512,7 @@ body.login
     height: 100%;
     font-size: 0.9em;
     font-family: sans-serif;
+    overflow: hidden;
 }
 
 .login .main-data {
