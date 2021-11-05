@@ -29,7 +29,7 @@ body
 {
     min-width: min-content;
     font-family: sans-serif;
-    background-image: url('../images/background.jpg') no-repeat center center fixed; 
+    background-image: url('../images/background.jpg'); 
     background-size: 100% auto;
     background-repeat: no-repeat;
     background-position: bottom;
