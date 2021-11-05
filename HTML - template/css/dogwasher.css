@@ -1,7 +1,11 @@
 * {
-    margin: 0 auto;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+html, body, .main-data
+{ 
+    min-height:100vh;
 }
 
 body
