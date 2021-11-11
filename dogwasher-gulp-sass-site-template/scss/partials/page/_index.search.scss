@@ -1,0 +1,42 @@
+.index #search 
+{
+    min-width: 500px;
+    align-self: center;
+}
+.index #search > div 
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.index #search span 
+{
+    vertical-align: center;
+}
+.index #search input[type=text] 
+{
+    padding: 2px;
+    text-align: center;
+    width: 12ch;
+}
+.index #search button ,
+.index .modal-buttons button
+{
+    background-color: transparent; 
+    color: black; 
+    border: 2px solid #2a7bcf;
+    padding: .1rem 2rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: .3rem .15rem;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 1.4rem;
+    font-size: inherit;
+} 
+.index #search button:hover 
+{
+    background-color: #2a7bcf;
+    color: white;
+}

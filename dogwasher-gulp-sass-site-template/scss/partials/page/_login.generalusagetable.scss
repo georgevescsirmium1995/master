@@ -1,0 +1,113 @@
+.login .data-table-general-usage {
+    border-collapse: collapse;
+    margin: 0 auto;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.login .data-table-general-usage thead tr {
+    background-color: #2a7bcf;
+    color: #ffffff;
+    text-align: center;
+}
+
+.login .data-table-general-usage th, .data-table-general-usage td {
+    padding: 12px 15px;
+    text-align: center;
+}
+
+.login .data-table-general-usage tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.login .data-table-general-usage tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.login .data-table-general-usage tbody tr:last-of-type {
+    border-bottom: 2px solid #2a7bcf;
+}
+
+.login .data-table-general-usage tbody tr.active-row {
+    font-weight: bold;
+    color: #2a7bcf;
+}
+
+.login .highlight {
+    background-color: #2a7bcf;
+    color: #ffffff;
+    text-align: center;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border-bottom: #000000 5px solid;
+}
+
+.login .highlight-left
+{
+    width: 50%;
+    float: left;
+    text-align: left;
+}
+
+.login .highlight-right
+{
+    text-align: right;
+}
+
+.login .button-foundation {
+    background-color: #2a7bcf; 
+    border: none;
+    color: white;
+    padding: 4px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 20px;
+}
+  
+.login .button-front {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #2a7bcf;
+}
+  
+.login .button-front:hover {
+    background-color: #2a7bcf;
+    color: white;
+}
+
+.login .footer {
+    position:absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: white;
+    text-align: center;
+    margin-bottom: 10px;
+    background-color: #2a7bcf;
+    text-align: center;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    margin-top: 10px;
+    border-bottom: #000000 5px solid;
+}
+
+a, a:link, a:visited {
+    color:#ffffff;
+}
+
+.login .table-search {
+    width: 550px;
+}
+
+.login .table-search td {
+    text-align: left;
+    vertical-align: middle;
+}
+
+.login .table-search .table-column {
+    width: 450px;
+}

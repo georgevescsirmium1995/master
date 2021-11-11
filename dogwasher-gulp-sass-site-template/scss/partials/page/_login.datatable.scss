@@ -1,0 +1,78 @@
+.login .data-table {
+    table-layout: fixed;
+    border-collapse: collapse;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.login .data-table tbody {
+    display: block;
+    width: 100%;
+    overflow: auto;
+    height: 400px;
+}
+  
+.login .data-table thead tr {
+    background-color: #2a7bcf;
+    color: #ffffff;
+    text-align: center;
+    display: block;
+    width: 100%;
+}
+
+.login .data-table th, .data-table td {
+    padding: 12px 15px;
+    text-align: center;
+}
+
+.login .edit-button
+{
+    width: 32px;
+    height: 32px;
+    background: url("../images/edit_normal.png") no-repeat;
+    display: inline-block;
+}
+
+.login .edit-button:hover{
+    background: url("../images/edit_hover.png") no-repeat;
+}
+
+.login .delete-button
+{
+    width: 32px;
+    height: 32px;
+    background: url("../images/delete_normal.png") no-repeat;
+    display: inline-block;
+}
+
+.login .delete-button:hover{
+    width: 32px;
+    height: 32px;
+    background: url("../images/delete_hover.png") no-repeat;
+}
+
+.login .small_column
+{
+    width: 80px;
+}
+
+.login .large_column
+{
+    width: 150px;
+}
+
+.login .data-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.login .data-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.login .data-table tbody tr:last-of-type {
+    border-bottom: 2px solid #2a7bcf;
+}
+
+.login .data-table tbody tr.active-row {
+    font-weight: bold;
+    color: #2a7bcf;
+}

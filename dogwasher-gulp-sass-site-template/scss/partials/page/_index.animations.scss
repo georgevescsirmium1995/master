@@ -1,0 +1,19 @@
+.index .animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+  
+@keyframes animatezoom 
+{
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+.index .link-effect
+{
+    cursor: pointer;
+}
+a, a:link, a:visited 
+{
+    color:#ffffff;
+}

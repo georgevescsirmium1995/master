@@ -1,0 +1,24 @@
+.index .footer 
+{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-self: stretch;
+}
+.index .footer::after
+{
+    content: '';
+    display: block;
+    background-color: white;
+    height: 1rem;
+}
+.index .contact 
+{
+    color: white;
+    text-align: center;
+    background-color: #2a7bcf;
+    padding: .85rem 1rem;
+    margin-top: .7rem;
+    border-bottom: #000000 2px solid;  
+}

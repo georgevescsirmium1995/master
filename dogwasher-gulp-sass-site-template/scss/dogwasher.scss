@@ -1,0 +1,23 @@
+$project: "gulp sass site template";
+$version: "0.0.0.3              ";
+$author:  "PhD Predrag Pecev    ";
+/*===================================*/
+/* This is a CSS file                */
+/* Project : #{$project}	 */
+/* Version : #{$version}	 */
+/* Author  : #{$author}   */
+/*===================================*/
+
+
+@import 'partials/variable.definitions';
+@import 'partials/lookup.functions';
+@import 'partials/mixin.definitions';
+
+@import 'partials/page/index.maindata';
+
+
+
+
+
+
+
