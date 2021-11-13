@@ -1,0 +1,38 @@
+$project: "gulp sass site template";
+$version: "0.0.0.3              ";
+$author:  "PhD Predrag Pecev    ";
+/*===================================*/
+/* This is a CSS file                */
+/* Project : #{$project}	 */
+/* Version : #{$version}	 */
+/* Author  : #{$author}   */
+/*===================================*/
+
+
+@import 'partials/page/united.dogwasher.parametres';
+@import 'partials/page/dogwasher.root';
+@import 'partials/page/index.body';
+@import 'partials/page/index.maindata.parametres';
+@import 'partials/page/dogwasher.index.highlight';
+@import 'partials/page/index.search';
+@import 'partials/page/dogwasher.index.menu.desktop';
+@import 'partials/page/index.data.table';
+@import 'partials/page/index.footer';
+@import 'partials/page/index.menu.mobile';
+@import 'partials/page/index.search';
+@import 'partials/page/dogwasher.index.modal';
+@import 'partials/page/dogwasher.index.animation';
+@import 'partials/page/dogwasher.login.rules';
+@import 'partials/page/dogwasher.login.datatable';
+@import 'partials/page/_dogwasher.login.table';
+@import 'partials/page/dogwasher.login.container';
+@import 'partials/page/dogwasher.login.button.style';
+
+
+
+
+
+
+
+
+

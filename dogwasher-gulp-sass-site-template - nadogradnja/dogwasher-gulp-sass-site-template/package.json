@@ -1,0 +1,33 @@
+{
+  "name": "gulp-sass-site-template",
+  "version": "0.0.3",
+  "description": "gulp sass site template",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "gulp",
+    "sass",
+    "template"
+  ],
+  "author": "PhD Predrag Pecev",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.27.4",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.0.0",
+    "gulp-uglify-es": "^2.0.0",
+    "node-sass": "^6.0.1"
+  },
+  "dependencies": {
+    "gulp-cli": "^2.3.0",
+    "gulp-if": "^3.0.0",
+    "minimist": "^1.2.5"
+  }
+}
