@@ -1,0 +1,35 @@
+@media only screen and (max-width: 799px) 
+    {
+        .index {
+            .footer {
+                min-height: 50vw; 
+            }
+        }
+}
+.index {
+    .footer {
+        flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-self: stretch;
+    }
+}
+.index {
+    .footer::after{
+        content: '';
+    display: block;
+    background-color: pickup_color_pallete(body-color);
+    height: 1rem;
+    }
+}
+.index {
+    .contact {
+        color: white;
+    text-align: center;
+    background-color: pickup_color_pallete(smurf-blue-color);
+    padding: .85rem 1rem;
+    margin-top: .7rem;
+    border-bottom: 2px solid pickup_color_pallete(pure-black-color);  
+    }
+}

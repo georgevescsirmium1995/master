@@ -1,0 +1,242 @@
+/* login page*/
+
+
+.login .container input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+  
+  /* Set a style for all buttons */
+.login .login-button {
+    padding: 14px 20px;
+    margin: 8px 0;
+    cursor: pointer;
+    width: 100%;
+    background-color: #2a7bcf;
+    color: white;
+}
+
+.login .login-button:hover
+{
+    opacity: 0.8;
+}
+   
+.login .imgcontainer {
+    text-align: center;
+    margin: 10px 0 0 0;
+    position: relative;
+}
+  
+.login .container {
+    padding: 16px;
+    text-align: left;
+}
+  
+.login .modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+    padding-top: 60px;
+}
+  
+.login .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; 
+    border: 1px solid #888;
+    width: 30%; 
+}
+.login .animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+  
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+.login .edit-record-modal-buttons
+{
+    text-align: center;
+}
+
+.login .language-highlight
+{
+    background-color: #2a7bcf;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 15px;
+    border-bottom: #000000 5px solid;
+}
+
+.login .language-highlight-main
+{
+    background-color: #2a7bcf;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 15px;
+    border-bottom: #000000 5px solid;
+    height: 25px;
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.login .language-container
+{
+    padding-top: 5px;
+    text-align: center;
+    width: 50%;
+    height: 25px;
+    margin: 0 auto;
+}
+
+.login .language-container-main
+{
+    float: right;
+}
+
+.login .language-instance
+{
+    text-align: center;
+    width: 33%;
+    float:left;
+}
+
+.login .language-instance:hover
+{
+    cursor: pointer;
+}
+
+.login .language-instance-main
+{
+    text-align: center;
+    margin-left: 5px;
+    margin-right: 5px;
+    float:left;
+}
+
+.login .language-instance-main:hover
+{
+    cursor: pointer;
+}
+
+.login .user-panel
+{
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    float:left;
+}
+
+.login .error-message
+{
+    border-radius: 10px;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #ff0000;
+    color: #ffffff;
+}
+
+.login .error-message-edit
+{
+    margin-left: 50px;
+}
+
+.login .link-effect
+{
+    cursor: pointer;
+}
+
+.login .logo-image
+{
+    width: 80%;
+}
+
+.login .language-text
+{
+    float: left;
+    text-align: center;
+    width: 80%;
+}
+
+.login .language-image
+{
+    float: left;
+    padding-top: 2px;
+
+}
+
+/* media query */
+
+/* small screen size (small) --smal */
+
+@media screen and (min-width: 640px) {
+
+    .login .language-image
+    {
+        padding-left: 30%;
+    }
+
+    .login .language-text
+    {
+        display: none;
+    }
+}
+
+/* medium screen size (medium) --medium */
+
+@media screen and (min-width: 1280px) {
+
+    .login .language-image
+    {
+        padding-left: 0;
+    }
+
+    .login .language-container
+    {
+        width: 80%;
+    }
+
+    .login .language-text
+    {
+        display: block;
+    }
+}
+
+/* medium screen size (large) --large */
+
+@media screen and (min-width: 1920px) {
+
+    .login .language-image
+    {
+        padding-left: 0;
+    }
+
+    .login .language-text
+    {
+        display: block;
+    }
+
+    .login .language-container
+    {
+        width: 50%;
+    }
+}

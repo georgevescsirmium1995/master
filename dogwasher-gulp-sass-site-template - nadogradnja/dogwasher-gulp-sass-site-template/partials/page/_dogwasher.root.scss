@@ -1,0 +1,102 @@
+@media only screen and (max-width: 600px) 
+{
+    :root 
+    {
+        font-size: 12px;
+    }
+}
+@media only screen and (max-width: 500px) 
+{
+    :root 
+    {
+        font-size: 10px;
+    }
+}
+:root 
+{
+    font-size: 14px;
+}
+@media only screen and (min-width: 800px) 
+{
+    /* for desktop */
+    .index {
+        .menu.desktop{
+            display: flex;
+        }
+    }
+.index {
+    .mobile {
+        display: none;
+    }
+}
+@media only screen and (max-width: 799px) 
+{
+    /* for mobile */
+    .index {
+        .desktop {
+            display: none;
+        }
+    }
+    .index {
+        .menu.mobile {
+            display: flex;
+        }
+    }
+}
+/* medium screen size (medium) --medium */
+
+@media screen and (min-width: 1280px) {
+
+    .login {
+        .language-image{
+            padding-left: 0; 
+        }
+    }
+.login {
+    .language-container{
+        width: 80%;
+    }
+}
+.login {
+    .language-text {
+        display: block;
+    }
+}
+
+/* medium screen size (large) --large */
+
+@media screen and (min-width: 1920px) {
+.login {
+    .language-image{
+        padding-left: 0;
+    }
+}
+.login {
+    .language-text{
+        display: block;
+    }
+}
+.login {
+    .language-container{
+        width: 50%; 
+    }
+}
+
+
+@media only screen and (max-width: 795px) {
+    .login .Navbar__Items{
+        flex-direction: column;  
+    }
+    .login .Navbar {
+      flex-direction: column;
+    }
+    .login .Navbar__Items {
+        display:none;
+      }
+    .login .Navbar__Items--right {
+      margin-left: 0;
+    }
+  }
+}
+}
+}

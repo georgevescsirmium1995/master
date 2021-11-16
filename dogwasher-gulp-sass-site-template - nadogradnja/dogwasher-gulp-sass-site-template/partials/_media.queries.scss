@@ -1,0 +1,6 @@
+@media only screen and (max-width: 600px) {
+@include root-600();
+  }
+  @media only screen and (max-width: 500px) {
+@include root-500();
+  }

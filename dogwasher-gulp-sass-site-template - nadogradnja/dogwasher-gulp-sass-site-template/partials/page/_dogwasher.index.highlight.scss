@@ -1,0 +1,12 @@
+.index {
+    .highlight {
+        background-color: pickup_color_pallete(smurf-blue-color);
+    color: pickup_color_pallete(body-color);
+    padding: 1rem 1rem .5rem 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 3px solid pickup_color_pallete(pure-black-color);
+
+    align-self: stretch;
+    font-size: 2rem;
+    }
+}

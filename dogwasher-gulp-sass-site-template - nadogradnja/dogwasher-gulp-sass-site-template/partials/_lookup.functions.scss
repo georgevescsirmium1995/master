@@ -1,0 +1,12 @@
+@function value_lookup($map, $keys...) {
+  
+  @each $key in $keys {
+    $map: map-get($map, $key);
+  }
+  
+  @return $map;
+}
+
+@function lookup_color_palette($keys...) {
+  @return value_lookup($color-palette, $keys...);
+}

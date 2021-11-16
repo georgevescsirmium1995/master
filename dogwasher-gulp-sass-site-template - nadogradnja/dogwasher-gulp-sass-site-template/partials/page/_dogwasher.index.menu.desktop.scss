@@ -1,0 +1,45 @@
+.index {
+    .menu {
+        .desktop {
+    background-color: #2a7bcf;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    border-bottom: #000000 3px solid;
+    padding: .35rem .7rem .35rem .7rem;
+    width: 100%;
+    justify-content: space-between;
+        }
+    }
+}
+.index {
+    .highlight-left {
+        min-width: max-content;
+    }
+}
+.index {
+    .highlight-right{
+    min-width: max-content;
+    display: flex;
+    }
+}
+.index {
+    .language-container{
+    display: flex;
+    }
+}
+.index {
+    .language-instance{
+    margin-left: .35rem;
+    }
+}
+.index {
+    .user-panel {
+    margin-left: .7rem;
+    margin-right: .7rem;
+    }
+}
+
+@mixin pointer-cursor {
+    .index .language-container .language-instance .user-panel {cursor:pointer;}
+}
+
